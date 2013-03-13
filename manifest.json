@@ -1,19 +1,14 @@
 {
-   "name": "GitHub Time Tracking",
-   "version": "0.4",
+   "name": "GitHub Time Tracking for AC",
+   "version": "0.1",
    "manifest_version": 2,
 
-   "description": "Add time tracking to the GitHub Issue Tracker with Harvest.",
-   "icons": {
-      "128": "img/github-time-tracking-128.png",
-      "48": "img/github-time-tracking-48.png",
-      "16": "img/github-time-tracker-16.png"
-   },
-
+   "description": "Add time tracking to the GitHub Issue Tracker with AC.",
    "content_scripts": [ {
-      "js": [ "data/index.js" ],
+      "js": [ "javascripts/index.js" ],
+      "css": [ "stylesheets/index.css"],
       "matches": [ "https://github.com/*/issues/*", "https://github.com/*/pull/*" ]
    } ],
-   "content_security_policy": "script-src 'self' https://*.harvestapp.com; object-src 'self'",
-   "permissions": [ "https://github.com/*", "https://*.harvestapp.com/*", "tabs" ]
+   "permissions": [ "https://github.com/*", "http://localhost:3000/*" ],
+   "web_accessible_resources": ["images/timer-icon.png"]
 }

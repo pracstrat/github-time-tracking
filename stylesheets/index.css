@@ -1,0 +1,37 @@
+.clearfix:after {
+  content:".";
+  display:block;
+  height:0;
+  clear:both;
+  visibility:hidden
+}
+
+.shepherd-timer-icon, .shepherd-timer.styled {
+  border:0;
+  font:inherit;
+  font-size:0;
+  line-height:1;
+  margin:0;
+  padding:0;
+  vertical-align:top
+}
+
+.shepherd-timer-icon {
+  background:url('chrome-extension://__MSG_@@extension_id__/images/timer-icon.png') no-repeat 0 0;
+  display:inline-block;
+  height:14px;
+  width:12px
+}
+
+.shepherd-timer.styled {
+  background:#fafafa;
+  background:linear-gradient(top, #ffffff,#eeeeee);
+  border:1px solid #bbb;
+  cursor:pointer;
+  display:inline-block;
+  height:14px;
+  padding:2px 3px;
+  width:12px;
+  border-radius:2px;
+  font-smoothing:antialiased
+}
